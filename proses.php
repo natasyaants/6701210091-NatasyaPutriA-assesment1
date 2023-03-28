@@ -5,34 +5,34 @@
 </head>
 <body>
 	<form method="post">
-		<input type="number" name="angka_1" placeholder="Masukkan angka pertama"><br>
-		<input type="number" name="angka_2" placeholder="Masukkan angka kedua"><br>
+		<input type="number" name="angka1" placeholder="Masukkan angka pertama"><br>
+		<input type="number" name="angka2" placeholder="Masukkan angka kedua"><br>
 		<select name="operator">
 			<option value="tambah">+</option>
 			<option value="kurang">-</option>
-			<option value="kali">/</option>
-			<option value="bagi">*</option>
+			<option value="kali">*</option>
+			<option value="bagi">/</option>
 		</select><br>
 		<input type="submit" name="submit" value="Hitung">
 	</form>
 	<?php
 		if(isset($_POST['submit'])){
-			$angka_1 = $_POST['angka_1'];
-			$angka_2 = $_POST['angka_2'];
+			$angka1 = $_POST['angka1'];
+			$angka2 = $_POST['angka2'];
 			$operator = $_POST['operator'];
 
 			switch($operator){
 				case "tambah":
-					$hasil = $angka_1 + $angka_2;
+					$hasil = $angka1 + $angka2;
 					break;
 				case "kurang":
-					$hasil = $angka_1 - $angka_2;
+					$hasil = $angka1 - $angka2;
 					break;
 				case "kali":
-					$hasil = $angka_1 * $angka_2;
+					$hasil = $angka1 * $angka2;
 					break;
 				case "bagi":
-					$hasil = $angka_1 / $angka_2;
+					$hasil = $angka1 / $angka2;
 					break;
 			}
 
